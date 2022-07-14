@@ -14,6 +14,8 @@
 	--light-grey-bgc: #F5F4FA;
 	--header-border-clr: #ECECEC;
 	--portfolio-card-border-clr:#EEEEEE;
+	--card-item: 4;
+	--gap: 30px;
 }
 
 /* visually-hidden */
@@ -74,7 +76,6 @@ body {
 }
 
 .section {
-	text-align: center;
 	padding-top: 94px;
 	padding-bottom: 94px;
 }
@@ -247,6 +248,7 @@ ul {
 }
 
 .card-set {
+	flex-basis: (100% - (var(--card-item) - 1))*var(--gap) / var(--card-item)
 	display: flex;
 	flex-wrap: wrap;
 	gap: 30px;
