@@ -68,7 +68,7 @@ body {
 	gap: var(--gap);
 }
 .card-item{
-		flex-basis: (100% - ((var(--card-item) - 1) * var(--gap) )) / var(--card-item);
+		flex-basis: calc((100% - (var(--card-item) - 1) * var(--gap) ) / var(--card-item));
 }
 ::selection {
 	background-color: var(--accent);
@@ -279,11 +279,6 @@ ul {
 }
 
 
-.features .item {
-	width: calc((100% - 3 * 30px) / 4);
-}
-
-
 .features p:last-child {
 	margin-bottom: 0;
 }
@@ -292,7 +287,9 @@ ul {
 .work {
 	padding-top: 0;
 }
-
+.work-list{
+	--card-item:3;
+}
 
 
 
@@ -437,7 +434,9 @@ ul {
 	margin-bottom: 0;
 }
 
-
+.portfolio-item{
+	--card-item:3;
+}
 
 
 /* footer styles */
