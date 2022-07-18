@@ -8,12 +8,19 @@
 	--accent: #2196F3;
 	--logo-bl: #000000;
 	--page-grey: #757575;
-	--main-font-family: "Roboto", sans-serif;
-	--logo-font-family: "Raleway", sans-serif;
 	--btn-hover: #188CE8;
 	--light-grey-bgc: #F5F4FA;
+	--icon-link: #AFB1B8;
+
+	/* кольори рамок */
 	--header-border-clr: #ECECEC;
 	--portfolio-card-border-clr: #EEEEEE;
+
+	/* Шрифти */
+	--main-font-family: "Roboto", sans-serif;
+	--logo-font-family: "Raleway", sans-serif;
+
+	/* Змінні для флексу */
 	--card-item: 4;
 	--gap: 30px;
 }
@@ -62,14 +69,18 @@ body {
 	color: var(--page-grey);
 }
 
+/* Флекс сітка */
 .card-set {
 	display: flex;
 	flex-wrap: wrap;
 	gap: var(--gap);
 }
-.card-item{
-		flex-basis: calc((100% - (var(--card-item) - 1) * var(--gap) ) / var(--card-item));
+
+.card-item {
+	flex-basis: calc((100% - (var(--card-item) - 1) * var(--gap)) / var(--card-item));
 }
+
+/* Вибір елемента */
 ::selection {
 	background-color: var(--accent);
 	color: #FFFFFF;
@@ -123,6 +134,11 @@ ul {
 
 
 /* header */
+.header-container {
+	display: flex;
+	align-items: center;
+}
+
 .header {
 	border-bottom: 1px solid var(--header-border-clr);
 	font-weight: 500;
@@ -162,11 +178,6 @@ ul {
 
 }
 
-.header-container {
-	display: flex;
-	align-items: center;
-}
-
 .site-nav {
 	display: flex;
 
@@ -196,6 +207,8 @@ ul {
 	color: var(--page-grey);
 
 }
+
+
 
 /* index-page styles */
 
@@ -236,6 +249,18 @@ ul {
 }
 
 .hero {
+	background-image: linear-gradient(to right,
+			rgba(47, 48, 58, 0.4),
+			rgba(47, 48, 58, 0.4)),
+		url("../images/hero-img/overlay.jpg");
+	max-width: 1600px;
+	min-height: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
 	padding-top: 200px;
 	padding-bottom: 200px;
 	text-align: center;
@@ -254,7 +279,6 @@ ul {
 	text-transform: uppercase;
 	color: var(--primary-white);
 }
-
 
 
 
@@ -283,12 +307,14 @@ ul {
 	margin-bottom: 0;
 }
 
+
 /* work-section styles */
 .work {
 	padding-top: 0;
 }
-.work-list{
-	--card-item:3;
+
+.work-list {
+	--card-item: 3;
 }
 
 
@@ -303,6 +329,10 @@ ul {
 .team-text {
 	font-size: 16px;
 	line-height: 1.19;
+}
+
+.card-item {
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .team .item {
@@ -323,6 +353,8 @@ ul {
 	font-weight: 500;
 	margin-bottom: 10px;
 }
+
+
 
 /* Portfolio-page styles */
 
@@ -434,9 +466,10 @@ ul {
 	margin-bottom: 0;
 }
 
-.portfolio-item{
-	--card-item:3;
+.portfolio-item {
+	--card-item: 3;
 }
+
 
 
 /* footer styles */
@@ -481,4 +514,104 @@ ul {
 
 .site-nav .current-page {
 	color: var(--accent);
+}
+
+/* Icons style */
+.contact-icon {
+	margin-right: 10px;
+}
+
+.team-text {
+	margin-bottom: 16px;
+}
+
+.socials {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+
+}
+
+.social-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 44px;
+	height: 44px;
+	color: var(--icon-link);
+	background-color: var(--primary-white);
+	border-radius: 50%;
+}
+
+.social-icon {
+	fill: currentColor;
+
+
+}
+
+.social-link:hover,
+.social-link:focus {
+	background-color: var(--accent);
+	color: var(--primary-white);
+}
+
+.partners {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+
+}
+
+.partners-item {
+	border: 1px solid var(--icon-link);
+	border-radius: 4px;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	padding-left: 32px;
+	padding-right: 32px;
+
+
+}
+
+.partners-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--icon-link);
+	background-color: var(--primary-white);
+
+}
+
+.partners-icon {
+	fill: currentColor;
+
+}
+
+.partners-item:hover,
+.partners-item:focus {
+	border: 1px solid var(--accent);
+}
+
+.partners-icon:hover,
+.partners-icon:focus {
+	color: var(--accent);
+}
+.footer-elements{
+	display: flex;
+	align-items: baseline;
+		gap: 70px;
+}
+
+.footer-socials .tittle{
+		margin-top: 0;
+			margin-bottom: 20px;
+			font-weight: 700;
+			font-size: 14px;
+			text-transform: uppercase;
+			color: var(--primary-white);
+}
+.footer-socials .link{
+	background-color: ;
 }
