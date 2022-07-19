@@ -11,6 +11,7 @@
 	--btn-hover: #188CE8;
 	--light-grey-bgc: #F5F4FA;
 	--icon-link: #AFB1B8;
+	--social-link-bgc:rgba(255, 255, 255, 0.1);
 
 	/* кольори рамок */
 	--header-border-clr: #ECECEC;
@@ -331,9 +332,7 @@ ul {
 	line-height: 1.19;
 }
 
-.card-item {
-	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-}
+
 
 .team .item {
 	background-color: var(--primary-white);
@@ -392,6 +391,7 @@ ul {
 
 .filter-list .item {
 	margin-right: 0;
+
 }
 
 .filter-list .item:nth-child(n + 2) {
@@ -399,7 +399,11 @@ ul {
 }
 
 /* justify-content: space-between;  робить дирку в разі іншої кількості елементів*/
-
+.portfolio-item:hover,
+.portfolio-item:focus{
+	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+		border-radius: 4px;
+}
 
 .hover-text {
 	display: none;
@@ -447,6 +451,8 @@ ul {
 .filter-btn:focus {
 	background-color: var(--accent);
 	color: var(--primary-white);
+	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+		border-radius: 4px;
 }
 
 
@@ -524,7 +530,21 @@ ul {
 .team-text {
 	margin-bottom: 16px;
 }
+/* features icons */
+.features-list{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+	margin-bottom: 30px;
+}
+.features-item{
+	padding:25px 100px;
+	background: var(--light-grey-bgc);
+		border-radius: 4px;
+}
 
+/* sicials icons */
 .socials {
 	display: flex;
 	justify-content: center;
@@ -555,7 +575,7 @@ ul {
 	background-color: var(--accent);
 	color: var(--primary-white);
 }
-
+/* partners icons */
 .partners {
 	display: flex;
 	justify-content: center;
@@ -566,6 +586,7 @@ ul {
 
 .partners-item {
 	border: 1px solid var(--icon-link);
+  width: 170px;
 	border-radius: 4px;
 	padding-top: 16px;
 	padding-bottom: 16px;
@@ -598,6 +619,8 @@ ul {
 .partners-icon:focus {
 	color: var(--accent);
 }
+
+/* footer social icons */
 .footer-elements{
 	display: flex;
 	align-items: baseline;
@@ -613,5 +636,12 @@ ul {
 			color: var(--primary-white);
 }
 .footer-socials .link{
-	background-color: ;
+background-color:var(--social-link-bgc);
+}
+.footer-socials .social-icon{
+color: var(--primary-white);
+}
+.footer-socials .link:hover,
+.footer-socials .link:focus{
+	background-color: var(--accent);
 }
