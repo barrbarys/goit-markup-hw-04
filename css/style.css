@@ -204,10 +204,10 @@ ul {
 } */
 
 .header-link .link {
-	display: block;
+	display: flex;
+	align-items: center;
 	padding-top: 32px;
 	padding-bottom: 32px;
-	color: var(--page-grey);
 
 }
 
@@ -400,9 +400,13 @@ ul {
 	margin-left: 8px;
 }
 
+.portfolio-link {
+	display: block;
+}
+
 /* justify-content: space-between;  робить дирку в разі іншої кількості елементів*/
-.portfolio-item:hover,
-.portfolio-item:focus {
+.portfolio-link:hover,
+.portfolio-link:focus {
 	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 	border-radius: 4px;
 }
@@ -525,26 +529,24 @@ ul {
 	position: relative;
 
 }
+
 .header-current-page::after {
-position: absolute;
-bottom: 0;
+	position: absolute;
+	bottom: 0;
 	content: '';
 
 	display: block;
 	width: 100%;
 	height: 4px;
-padding: 0;
+	padding: 0;
 	border-radius: 2px;
 	background-color: var(--accent);
 }
-.header-link .link {
-	display: flex;
-	align-items: center;
-}
+
 
 /* Icons style */
 .contact-icon {
-
+	fill: currentColor;
 	margin-right: 10px;
 }
 
@@ -553,15 +555,12 @@ padding: 0;
 }
 
 /* features icons */
-.features-list {
+.features-item {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	gap: 30px;
 	margin-bottom: 30px;
-}
-
-.features-item {
 	padding: 25px 100px;
 	background: var(--light-grey-bgc);
 	border-radius: 4px;
@@ -601,29 +600,24 @@ padding: 0;
 
 /* partners icons */
 .partners {
-	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 30px;
-
 }
 
-.partners-item {
-	border: 1px solid var(--icon-link);
-	width: 170px;
-	border-radius: 4px;
-	padding-top: 16px;
-	padding-bottom: 16px;
-	padding-left: 32px;
-	padding-right: 32px;
-
-
-}
 
 .partners-link {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	border: 1px solid var(--icon-link);
+	border-radius: 4px;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	/* padding-left: 32px;
+	padding-right: 32px; */
+
+
 	color: var(--icon-link);
 	background-color: var(--primary-white);
 
@@ -634,14 +628,14 @@ padding: 0;
 
 }
 
-.partners-item:hover,
-.partners-item:focus {
-	border: 1px solid var(--accent);
+.partners-item {
+	--card-item: 6;
 }
 
-.partners-icon:hover,
-.partners-icon:focus {
+.partners-link:hover,
+.partners-link:focus {
 	color: var(--accent);
+	border: 1px solid var(--accent);
 }
 
 /* footer social icons */
